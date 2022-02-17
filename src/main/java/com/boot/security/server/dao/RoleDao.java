@@ -16,6 +16,7 @@ import com.boot.security.server.model.Role;
 @Mapper
 public interface RoleDao {
 
+	// 主键自增策略
 	@Options(useGeneratedKeys = true, keyProperty = "id")
 	@Insert("insert into sys_role(name, description, createTime, updateTime) values(#{name}, #{description}, now(),now())")
 	int save(Role role);

@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/boot_security?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+    url: jdbc:mysql://localhost:330/boot_security?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
     username: root
-    password: root
+    password: 2514632453
     druid:
       initialSize: 5
       minIdle: 5
@@ -44,20 +44,21 @@ spring:
         max-wait: -1ms
   mail:
     default-encoding: UTF-8
-    host: smtp.163.com
-    username:
-    password:
+    host: smtp.qq.com
+    username: 2514632453@qq.com
+    password: qnidwjeueiuedhif
     protocol: smtp
     test-connection: false
 #    properties:
 #      mail.smtp.auth: true
 mybatis:
+  # 配置 xml 文件中返回类型所在的包，否则需要在 xml 文件中写全路径。若有多个包，用逗号或分号隔开
   type-aliases-package: com.boot.security.server.model
   mapper-locations: classpath:/mybatis-mappers/*
   configuration:
     mapUnderscoreToCamelCase: true
 files:
-  path: ${file-path:d:/files}
+  path: ${file-path:d:/IDEA/boot-security/文档和sql/files}
 logging:
   config: classpath:logback-admin.xml
 log:
@@ -66,9 +67,10 @@ log:
     my: debug
   file: logs/admin-server.log
   maxsize: 30MB
+# token 过期时间
 token:
   expire:
     seconds: 7200
   jwtSecret: (XIAO:)_$^11244^%$_(WEI:)_@@++--(LAO:)_++++_.sds_(SHI:)
 server:
-  port: 8080
+  port: 80
